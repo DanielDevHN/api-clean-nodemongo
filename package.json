@@ -7,6 +7,8 @@
     "start": "node dist/app.js",
     "dev": "nodemon --exec ts-node src/app.ts",
     "build": "tsc",
+    "seed:import": "ts-node src/infrastructure/database/mongoose/seed.ts --import",
+    "seed:destroy": "ts-node src/infrastructure/database/mongoose/seed.ts --destroy",
     "lint": "eslint . --ext .ts",
     "test": "jest --coverage"
   },
@@ -23,6 +25,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-list-endpoints": "^7.1.1",
     "helmet": "^6.0.1",
     "joi": "^17.7.0",
     "mongoose": "^7.0.0"
