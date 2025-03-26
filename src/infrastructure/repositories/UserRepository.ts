@@ -5,6 +5,7 @@ import UserModel, { UserDocument } from '../database/mongoose/models/UserModel';
 export class MongoUserRepository implements UserRepository {
   private mapToUser(doc: UserDocument): User {
     return {
+      userId: doc.id,
       name: doc.name,
       age: doc.age,
       createdAt: doc.createdAt,
